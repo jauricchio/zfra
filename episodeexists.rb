@@ -20,7 +20,7 @@ end
 
 
 if __FILE__ == $0 then
-  require 'Date'
+  require 'date'
   puts "There is #{episode_exists(show_date Date.today) ?"":"not "}an episode today."
   puts "There was #{episode_exists(show_date Date.today-1) ?"":"not "}an episode yesterday."
 end

@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require 'Date'
+require 'date'
 
 $rerun_start = Date.parse("2010-03-19")
 $series_start = Date.parse("2006-03-17")

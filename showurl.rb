@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 
-require 'Date'
+require 'date'
 
 def show_url(date)
   year = date.strftime "%Y"
