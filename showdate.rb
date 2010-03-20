@@ -9,7 +9,7 @@ def show_date(today)
     $series_start + (today - $rerun_start)
 end
 
-if __FILE__ == $0
+if __FILE__ == $0 then
   puts show_date(Date.today)
 end
 
