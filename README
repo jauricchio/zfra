@@ -1,0 +1,31 @@
+----==== ZE FRANK RIDES AGAIN ====----
+
+These scripts generate an Atom feed for The Show with Ze Frank[1], time-shifted
+4 years[2].
+
+I am providing a public feed at
+    http://joe.definitelynotsafe.com/ze-frank-rides-again.atom
+to which you are welcome to subscribe.
+
+----==== USAGE ====----
+
+$ ./todaysshow.rb
+    <entry>
+        <title>The Show for Friday, Mar 17</title>
+        <link href="http://www.zefrank.com/theshow/archives/2006/03/031706.html"/>
+        <author><name>Ze Frank</name></author>
+        <id>tag:joe.definitelynotsafe.com,2010-03-19:/zefrank/031706</id>
+        <updated>2010-03-21T15:43:09-07:00</updated>
+        <summary>jessica simpson loves bush, neverland, iraqis buy fruit, google scalia, bill gates, one laptop per child, 
+origami</summary>
+    </entry>
+
+----==== LICENSE ====----
+
+(C) Joe Auricchio 2010.
+All files are licensed Affero GPLv3.
+
+[1] http://www.zefrank.com/theshow/
+
+[2] 4 years + 2 days, so the days of the week match up. Ride The Fire Eagle
+    Danger Day shall be on Friday and only Friday.
