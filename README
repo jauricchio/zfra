@@ -20,6 +20,8 @@ $ ./todaysshow.rb
 origami</summary>
     </entry>
 
+If you run this yourself, please change the hostname in the <id> field.
+
 ----==== LICENSE ====----
 
 (C) Joe Auricchio 2010.
