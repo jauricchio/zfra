@@ -32,7 +32,7 @@ end
 
 
 if __FILE__ == $0 then
-  show = Show.new(Date.today+1)
+  show = Show.new(Date.today)
   puts show.to_atom
 end
 
