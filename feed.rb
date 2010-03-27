@@ -2,6 +2,7 @@
 
 require 'erb'
 require 'todaysentry'
+require 'episodeexists'
 
 def feed(d)
   # Update entries.log
@@ -19,5 +20,9 @@ def feed(d)
 end
 
 if __FILE__ == $0 then
-  puts feed(Date.today+2)
+  if(episode_exists(show_date(Date.today))) then
+    puts feed(Date.today)
+  else
+    exit 1
+  end
 end
