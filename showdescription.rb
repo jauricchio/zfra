@@ -4,7 +4,7 @@ require 'rubygems'
 require 'hpricot'
 require 'open-uri'
 
-require 'showurl'
+require 'bettershowurl'
 
 def show_description(date)
   url = show_url(date)

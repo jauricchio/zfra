@@ -4,7 +4,7 @@ require 'erb'
 require 'episodeexists'
 require 'showdate'
 require 'showdescription'
-require 'showurl'
+require 'bettershowurl'
 
 class Show
   def initialize(today)

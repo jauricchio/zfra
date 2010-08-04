@@ -4,7 +4,7 @@ require 'net/http'
 require 'uri'
 
 require 'showdate'
-require 'showurl'
+require 'bettershowurl'
 
 def episode_exists(date)
 
