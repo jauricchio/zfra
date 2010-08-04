@@ -1,28 +1,29 @@
 #!/usr/bin/env ruby
 
+require 'fileutils'
+
 require 'todaysshow'
 require 'episodeexists'
 
 def todays_entry(d)
 
-  # Read the log
-  entries = IO.read('entries.log')
-
   # Get today's entry
   begin
-    today = Show.new(d).to_atom
+    s = Show.new(d)
+    today_atom = s.to_atom
   rescue
     today = ""
   end
 
   # Write today's entry to the front of the log
+  entries = IO.read('entries.log')
+
   File.open('entries.log.new', 'w') do |f|
-    f.write(today)
+    f.write(today_atom)
     f.write(entries)
   end
 
   # Move new log into place
-  require 'fileutils'
   FileUtils.mv('entries.log.new', 'entries.log')
 
 end

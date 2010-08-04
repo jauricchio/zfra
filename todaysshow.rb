@@ -25,7 +25,7 @@ class Show
   end
 
   def to_atom
-    erb = ERB.new(File.read('entry.erb'))
+    erb = ERB.new(File.read('entry_atom.erb'))
     erb.result(binding)
   end
 end
