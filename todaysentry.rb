@@ -11,6 +11,7 @@ def todays_entry(d)
   begin
     s = Show.new(d)
     today_atom = s.to_atom
+    today_html = s.to_html
   rescue
     today = ""
   end
@@ -25,6 +26,14 @@ def todays_entry(d)
 
   # Move new log into place
   FileUtils.mv('entries.log.new', 'entries.log')
+
+  # Write today's html chunk
+  File.open('entry.html.new', 'w') do |f|
+    f.write(today_html)
+  end
+
+  # Move new chunk into place
+  FileUtils.mv('entry.html.new', 'entry.html')
 
 end
 

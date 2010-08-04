@@ -28,11 +28,17 @@ class Show
     erb = ERB.new(File.read('entry_atom.erb'))
     erb.result(binding)
   end
+
+  def to_html
+    erb = ERB.new(File.read('entry_html.erb'))
+    erb.result(binding)
+  end
 end
 
 
 if __FILE__ == $0 then
   show = Show.new(Date.today)
   puts show.to_atom
+  puts show.to_html
 end
 
