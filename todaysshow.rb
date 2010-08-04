@@ -11,7 +11,7 @@ class Show
     d = show_date(today)
 
     if(!episode_exists(d)) then
-      exit
+      raise
     end
 
     @title = "The Show for #{d.strftime('%A, %b %e')}"

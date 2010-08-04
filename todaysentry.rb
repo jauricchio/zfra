@@ -8,7 +8,11 @@ def todays_entry(d)
   entries = IO.read('entries.log')
 
   # Get today's entry
-  today = Show.new(d).to_atom
+  begin
+    today = Show.new(d).to_atom
+  rescue
+    today = ""
+  end
 
   # Write today's entry to the front of the log
   File.open('entries.log.new', 'w') do |f|
@@ -17,6 +21,7 @@ def todays_entry(d)
   end
 
   # Move new log into place
+  require 'fileutils'
   FileUtils.mv('entries.log.new', 'entries.log')
 
 end
