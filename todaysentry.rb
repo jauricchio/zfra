@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'todaysshow'
+require 'episodeexists'
 
 def todays_entry(d)
 
@@ -27,5 +28,7 @@ def todays_entry(d)
 end
 
 if __FILE__ == $0 then
-  todays_entry(Date.today)
+  if(episode_exists(show_date(Date.today))) then
+     todays_entry(Date.today)
+  end
 end

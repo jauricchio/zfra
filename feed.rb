@@ -5,12 +5,11 @@ require 'todaysentry'
 require 'episodeexists'
 
 def feed(d)
-  # Update entries.log
-  todays_entry(d)
+
+  sleep(1) # because NetNewsWire gets weird if the feed's updated is the same
+           # as the entry's updated; the entry was probably just updated
 
   # Bind vars for our erb template
-  sleep(1) # because NetNewsWire gets weird if the feed's updated is the same
-           # as the entry's updated
   @updated = Time.now.xmlschema
   @entries = File.read('entries.log')
 
